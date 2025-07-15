@@ -3,12 +3,12 @@
 #include <string.h>
 
 // Create a program that reads the name of two persons and calculate the mean of their ages.
-
+//variable
 int main() {
     int Age1, Age2;
     char name1[50], name2[50];
     float mean;
-
+//first person input
     printf("Type the first person's name: \n");
     fgets(name1, sizeof(name1), stdin);
     name1[strcspn(name1, "\n")] = '\0';
@@ -16,16 +16,16 @@ int main() {
     printf("Type the age: \n");
     scanf("%d", &Age1);
     getchar();
-
+//second person input
     printf("Type the second person's name: \n");
     fgets(name2, sizeof(name2), stdin);
     name2[strcspn(name2, "\n")] = '\0';
 
     printf("Type the age: \n");
     scanf("%d", &Age2);
-
+//calculus
     mean = (Age1 + Age2) / 2.0;
-
+//output
     printf("The mean between the person %s and the person %s is %.2f\n", name1, name2, mean);
 
     return 0;
